@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] tab = new int[5] {10,20,30,40,50};
+            Console.WriteLine(tab[1]);
+            Console.WriteLine("rozmiar tablicy: {0}", tab.Length);
+
+
+            int elem;
+            for (int i = 0; i < tab.Length; i++)
+            {
+                elem = i + 1;
+                Console.WriteLine("element {1}: {0}", tab[i], elem) ;
+            }
+            Console.ReadKey();
+        }
+    }
+}
