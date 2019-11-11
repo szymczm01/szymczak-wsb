@@ -1,0 +1,98 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace pierwsza_lekcja
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int zmienna = int.MinValue;
+            uint zmienna2 = int.MaxValue;
+            Console.WriteLine("Hello, World!");
+            uint zmienna4 = 1;
+            sbyte zmienna3 = sbyte.MinValue;
+            var zmienna1 = int.MaxValue;
+            Console.WriteLine(zmienna1);
+            bool zmienna6 = (2 > 3);
+            bool zmienna7 = zmienna6;
+            Console.WriteLine(zmienna7);
+
+            Console.WriteLine();
+
+            string zmienna99;
+            zmienna99 = "hello";
+            Console.WriteLine(zmienna99);
+
+            int a = 5;
+            int b = 9;
+            int c;
+            c = a % b;
+
+            Console.WriteLine(c);
+
+            int m = 5;
+            int n = 9;
+
+            m = n + m;
+            Console.WriteLine(m);
+
+            bool s = 2 == 2; // weryfikacja czy dane sa równe
+            Console.WriteLine(s);
+
+            bool s1 = 2 != 2; // weryfikacja czy dane sa rózne
+            Console.WriteLine(s1);
+
+            bool s2 = !true; //negacja
+
+            Console.WriteLine(s2);
+
+            bool s3 = 2 == 2 && 3 != 1; // koniunkcja  - &&
+            Console.WriteLine(s3);
+
+            bool s4 = 2 == 2 || 3 != 1; // alternatywa  - ||
+            Console.WriteLine(s4);
+
+            Console.Write("Podaj dlugosc boku a: ");
+            string w = Console.ReadLine();
+            Console.WriteLine(w);
+
+            Console.WriteLine();
+
+
+            // instrukcja IF/ instrukcja warunkowa if z 2 warunkami 
+
+            int e = 8; // zmienna calkowita
+
+            if (e > 6 && e >0) // warunke koniunkcji
+            {
+                Console.WriteLine("e jest wieksze od 6");
+                Console.WriteLine("e jest wieksze od 0");
+            }
+
+            else if (e > 0)
+            {
+                Console.WriteLine("e jest wieksze od 0");
+            }
+            else if ( e==5)
+
+            {
+                Console.WriteLine("e jest równe 5");
+            }                           
+            else
+
+            {
+                Console.WriteLine("e jest mniejsze od 6");
+            }
+        
+
+
+
+            Console.ReadKey();
+
+        }
+    }
+}
