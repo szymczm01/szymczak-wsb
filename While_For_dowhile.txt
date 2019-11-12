@@ -1,0 +1,56 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Druga_lekcja
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 2;
+
+            while (a<100) // tworzenie petli while (dopóki)
+            {
+                Console.Write(a);
+                Console.WriteLine(" petla while");
+                a+=2;
+
+            }
+
+            Console.WriteLine();
+
+            for(int b =6; b<11; b++)
+            {
+                Console.Write(b);
+                Console.WriteLine(" petla for");
+            }
+
+            Console.WriteLine();
+
+
+            do
+            {
+                Console.WriteLine("do while raz");
+            }
+            while (false);
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
