@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int x;
+            Console.Write("Podaj liczbê: ");
+            int liczba = int.Parse(Console.ReadLine());
+
+            bool[] sito = new bool[liczba + 1];
+            for (int i = 0; i <= liczba; i++)
+                sito[i] = true;
+            //sito eratostenesa
+
+            for (int i = 2; i <= liczba; i++)
+            {
+                if (sito[i])
+                {
+                    x = i;
+                    x = x + i;
+                    while (x <= liczba)
+                    {
+                        sito[x] = false;
+                        x = x + i;
+                    }
+                }
+                
+            }
+            for (int i = 1; i <= liczba; i++)
+                if (sito[i]) Console.Write(i+" ") ;
+
+
+
+
+
+
+
+            Console.ReadKey();
+        }
+    }
+}
