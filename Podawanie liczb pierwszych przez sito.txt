@@ -10,8 +10,9 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            int x;
-            Console.Write("Podaj liczb�: ");
+            int x, dzielnik = 0;
+            
+            Console.Write("Podaj liczbę: ");
             int liczba = int.Parse(Console.ReadLine());
 
             bool[] sito = new bool[liczba + 1];
@@ -28,13 +29,19 @@ namespace ConsoleApp4
                     while (x <= liczba)
                     {
                         sito[x] = false;
+                        if (x == liczba)
+                            dzielnik = i;
                         x = x + i;
                     }
+                    if (dzielnik > 1) break;
                 }
                 
             }
-            for (int i = 1; i <= liczba; i++)
-                if (sito[i]) Console.Write(i+" ") ;
+
+            if (sito[liczba]) Console.WriteLine("Liczba {0} jest liczbą pierwszą",liczba);
+            else Console.WriteLine("Liczba {0} jest liczbą złożoną i podzielną przez {1}", liczba, dzielnik);
+            //for (int i = 1; i <= liczba; i++)
+            //    if (sito[i]) Console.Write(i+" ") ;
 
 
 
