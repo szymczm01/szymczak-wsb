@@ -1,0 +1,115 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Add(2, 3); //argumenty
+            Add(1, 2, 3);
+            Console.WriteLine("Pole wynosi: {0}", SquareArea(4));
+            Console.WriteLine("Wynik dodawania: {0}", Add(1, 2, 3, 4));
+            Console.WriteLine("Wynik dodawania: {0}", Add(1));
+            data("Janusz", age: 30);
+            Console.Write("Podaj liczbê ca³kowit¹: ");
+            Add(Console.ReadLine());
+            Console.Write("Podaj liczbê: ");
+            Add1(Console.ReadLine());
+
+
+            Console.ReadKey();
+        }
+        static void Add(int a, int b)
+        {
+            int result = a + b; //parametry
+            Console.WriteLine("Wynik dodawnia: {0}", result);
+        }
+
+        static void Add(int a, int b, int c)
+        {
+
+            int result = a + b + c; //parametry
+            Console.WriteLine("Wynik dodawnia : {0}", result);
+
+        }
+        static int SquareArea(int a)
+        {
+            return a * a;
+        }
+
+        static int Add(int a, int b = 3, int c = 2, int d = 1)
+        {
+            return a + b + c + d;
+
+
+        }
+        static void data(string name, string surname = "Nowak", int age = 20)
+        {
+
+            Console.WriteLine("Imiê: {0}, nazwisko:{1}, wiek {2}", name, surname, age);
+        }
+        //Napisz program, który sprawdza czy liczba ca³kowita podana przez u¿ytkownika jest parzysta lub nie parzysta. 
+        //Napisz funkcje, która przyjmuje jako argument liczbê ca³kowit¹ ppodana przez u¿ytkowika z klawiatury
+        static void Add(string liczba)
+        {
+                        
+            int liczba1 = int.Parse(liczba);
+            if (liczba1 % 2 == 0)
+
+            {
+                Console.WriteLine("Liczba {0} jest parzysta", liczba1);
+            }
+            else
+                Console.WriteLine("Liczba {0} nie jest parzysta", liczba1);
+        }
+        //Napisz funkcjê która wyœwietli sumê cyfr w liczbie
+
+        //static void Add1(string number)
+       // {
+       //     int number1 = int.Parse(number);
+       //     int result = 0;
+      //      do
+       //     {
+       //         result = result + number1 % 10;
+       //         number1 /= 10;
+        //    } while (number1 != 0);
+       //     Console.WriteLine();
+
+      //  }
+
+     //   }
+
+}
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+        
+
+
+       
+
+
+
+       
+
+
+
+    
+
