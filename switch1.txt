@@ -1,0 +1,97 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace 
+{
+    class Program
+    {
+       
+        static void Main(string[] args)
+
+        {
+            //Zad.1
+            Console.WriteLine("WSB - kolokwium nr 1");
+            //Zad.2
+            Console.Write("\nPodaj długość podstawy trójkąta: ");
+            int dlugoscPodstawy = int.Parse(Console.ReadLine());
+            Console.Write("Podaj wysokość trójkąta: ");
+            int wysokoscTrojkata = int.Parse(Console.ReadLine());
+            //Zad.3
+            Console.Write("Podaj swój wiek: ");
+            uint wiek;
+            bool wiekUdaloSie = uint.TryParse(Console.ReadLine(), out wiek);
+            if (wiekUdaloSie)
+            {
+                Console.WriteLine("Twój wiek to {0}\n", wiek);
+            }
+            else
+            {
+                Console.WriteLine("Niepoprawny wiek.\n");
+            }
+            //Zad.4
+            int Opcja;
+            do
+            {
+            Console.WriteLine("1. Pole trójkąta");
+            Console.WriteLine("2. Wyświetl czy wiek jest liczbą parzystą");
+            Console.WriteLine("3. Macierz");
+            Console.WriteLine("0. Wyjdź");
+            Console.Write("> ");
+            Opcja = int.Parse(Console.ReadLine());       
+            switch (Opcja)
+            {
+                case (1):
+                    Console.Clear();
+                    double poleTrojkata = (dlugoscPodstawy * wysokoscTrojkata) / 2;
+                    Console.WriteLine("Wybrałeś Pole trójkąta.\n");
+                    Console.WriteLine("Podstawa trójkąta: {0}\nWysokość trójkąta: {1}\nPole trójkąta: {2}\n\nNaciśnij dowolny przycisk aby wrócić do menu.", dlugoscPodstawy, wysokoscTrojkata, poleTrojkata);
+                    Console.ReadKey();
+                    break;
+                case (2):
+                    Console.Clear();
+                    Console.WriteLine("Wybrałeś Wyświetlenie czy wiek jest liczbą parzystą.");
+                    Console.Write("Podaj swój wiek: ");
+                    int parzystosc = int.Parse(Console.ReadLine());
+                    if (parzystosc % 2 == 0)
+                    Console.WriteLine("Podana liczba {0} jest parzysta.", parzystosc);
+                    else
+                    Console.WriteLine("Podana liczba {0} nie jest parzysta.", parzystosc);
+                    Console.ReadKey();
+                    break;
+                case (3):
+                    Console.Clear();
+                    Console.WriteLine("Wybrałeś Macierz.\n");
+                    Console.Write("Podaj stopień macierzy: ");
+                    int stopienMacierzy = int.Parse(Console.ReadLine());
+                    int[,] macierz = new int[stopienMacierzy, stopienMacierzy];
+                    Console.WriteLine("Wybrałeś macierz stopnia {0}", stopienMacierzy);
+                        for (int i = 1; i < stopienMacierzy+1; i++)
+                        {
+                            Console.Write(i + " ");
+                            for (int j = 1; j < stopienMacierzy + 1; j++)
+                            {
+                                Console.Write(j + " ");
+                            }
+                            Console.WriteLine();
+                        }
+
+                    Console.ReadKey();
+                    break;
+                case (0):
+                    Console.Clear();
+                    Console.WriteLine("Wybrałeś wyjście, kliknij dowolny klawisz.");
+                    Console.ReadKey();
+                    break;
+                    default:
+                    break;
+            }
+                Console.Clear();
+            } while (Opcja != 0);
+
+
+        }
+    } 
+}
