@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rdm = new Random();
+            int los = rdm.Next(1, 11);
+
+            
+            int ileRazy = 0;
+            Console.WriteLine("Zgadnij liczbe z zakresu 1-11");
+
+            int mojaLiczba;
+           
+             
+
+
+            do
+            {
+                Console.Write("Podaj liczbe ");
+                mojaLiczba = int.Parse(Console.ReadLine());
+                if (mojaLiczba > 11 || mojaLiczba < 1)
+
+                {
+                    Console.WriteLine("Liczba z poza zakresu");
+                }
+                else
+                {
+                    ileRazy++;
+                    if
+                         (mojaLiczba > los)
+                    {
+                        Console.WriteLine("Liczba jest za duza");
+
+                    }
+                    else if (mojaLiczba < los)
+                    {
+                        Console.WriteLine("Liczba jest za mala");
+
+                    }
+                    else if (mojaLiczba == los)
+                    {
+                        Console.WriteLine("Brawo, zgadles za {0} razem", ileRazy);
+
+                    }
+                }
+            } while (los != mojaLiczba);
+
+
+            
+
+                Console.ReadKey();
+        }
+        
+
+        
+    }
+}

@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Menu");
+            Console.WriteLine("1. Chce wiedziec ile mam lat");
+            Console.WriteLine("2. Gdzie mieszkam");
+            Console.WriteLine("3. Koniec");
+
+            int menu = int.Parse(Console.ReadLine());
+
+            switch (menu)
+            {
+                case 1:
+                    Console.WriteLine("Mam 30 lat");
+                    break;
+                case 2:
+                    Console.WriteLine("Poznan");
+                    break;
+                case 3:
+                    Environment.Exit(menu);
+                    break;
+                
+                default:
+                    Console.WriteLine("inny przypadek");
+                    break;
+
+            }
+
+
+
+
+
+
+
+            Console.ReadKey();
+          
+        }
+    }
+}
